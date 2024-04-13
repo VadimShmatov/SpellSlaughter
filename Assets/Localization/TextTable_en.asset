@@ -1,0 +1,253 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TextTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: afa9eeb93ed430148ad81b7b35a21d05, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 2778970864991862821
+  m_TableData:
+  - m_Id: 320862916608
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 397497044992
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2161445146624
+    m_Localized: GAME OVER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2244882436096
+    m_Localized: Back to menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85053504458752
+    m_Localized: Rapid frost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85248938053632
+    m_Localized: Increases cold spell recovery speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85499354779648
+    m_Localized: Cold mind
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85562097373184
+    m_Localized: Increases hint rate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85695883087872
+    m_Localized: Eternal freeze
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85761070960640
+    m_Localized: Increases freeze duration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85947633602560
+    m_Localized: Icicle barrage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86130668834816
+    m_Localized: Shattered enemies emit more icicles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86336311365632
+    m_Localized: Glacial chill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86439734513664
+    m_Localized: Enemies move slower after cold spell cast
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86657192398848
+    m_Localized: Frigid fate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86772061802496
+    m_Localized: Enemies have a chance to shatter each second they stay frozen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87038324609024
+    m_Localized: Level {0}
+    m_Metadata:
+      m_Items:
+      - rid: 2778970864991862821
+  - m_Id: 113578311651328
+    m_Localized: "Recovery speed: {0}\u2192{1}%"
+    m_Metadata:
+      m_Items:
+      - rid: 2778970864991862821
+  - m_Id: 113788345618432
+    m_Localized: "Frequency: {0}\u2192{1}%"
+    m_Metadata:
+      m_Items:
+      - rid: 2778970864991862821
+  - m_Id: 113921976143872
+    m_Localized: "Minimum: {0}\u2192{1} s"
+    m_Metadata:
+      m_Items:
+      - rid: 2778970864991862821
+  - m_Id: 114053870227456
+    m_Localized: "Maximum: {0}\u2192{1} s"
+    m_Metadata:
+      m_Items:
+      - rid: 2778970864991862821
+  - m_Id: 114165484851200
+    m_Localized: "Amount: {0}\u2192{1}"
+    m_Metadata:
+      m_Items:
+      - rid: 2778970864991862821
+  - m_Id: 114345315635200
+    m_Localized: "Probability: {0}\u2192{1}%"
+    m_Metadata:
+      m_Items:
+      - rid: 2778970864991862821
+  - m_Id: 138687818731520
+    m_Localized: Rapid ignition
+    m_Metadata:
+      m_Items: []
+  - m_Id: 138775844589568
+    m_Localized: Increases fire spell recovery speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 139994470256640
+    m_Localized: Volcanic eruption
+    m_Metadata:
+      m_Items: []
+  - m_Id: 140103559909376
+    m_Localized: Gives a chance to create 2 more fire cracks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141166992134144
+    m_Localized: "Speedup: {0}\u2192{1}%"
+    m_Metadata:
+      m_Items:
+      - rid: 2778970864991862821
+  - m_Id: 143489969655808
+    m_Localized: Magma cascade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143651790098432
+    m_Localized: The initial fire crasks split faster
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143894850015232
+    m_Localized: Infernal fissure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143967101095936
+    m_Localized: Decreases minimum and maximum fire crack split time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 147951517929472
+    m_Localized: Phoenix rebirth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148042471411712
+    m_Localized: Hellfire is recast specified number of times after 2 sec
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148621595742208
+    m_Localized: "Duration: {0}\u2192{1} s"
+    m_Metadata:
+      m_Items:
+      - rid: 2778970864991862821
+  - m_Id: 149685606780928
+    m_Localized: Everlasting inferno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 149757237104640
+    m_Localized: Fire cracks last longer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 155641933697024
+    m_Localized: Rapid volt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 155702465892352
+    m_Localized: Increases lightning spell recovery speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156020645793792
+    m_Localized: "Effectiveness: {0}\u2192{1}%"
+    m_Metadata:
+      m_Items:
+      - rid: 2778970864991862821
+  - m_Id: 156870969626624
+    m_Localized: Rainbow lightnings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156935939395584
+    m_Localized: During Lightning storm, lightning cards restore fire and cold spells
+    m_Metadata:
+      m_Items: []
+  - m_Id: 159330421411840
+    m_Localized: Prolonged surge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 159452865728512
+    m_Localized: Lightning storm lasts longer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 163269401350144
+    m_Localized: "Minimum: {0}\u2192{1}"
+    m_Metadata:
+      m_Items:
+      - rid: 2778970864991862821
+  - m_Id: 163366184914944
+    m_Localized: "Maximum: {0}\u2192{1}"
+    m_Metadata:
+      m_Items:
+      - rid: 2778970864991862821
+  - m_Id: 163543746580480
+    m_Localized: "Distance: {0}\u2192{1} m"
+    m_Metadata:
+      m_Items:
+      - rid: 2778970864991862821
+  - m_Id: 165831038963712
+    m_Localized: Arcing fury
+    m_Metadata:
+      m_Items: []
+  - m_Id: 165892821061632
+    m_Localized: Increase minimum and maximum number of lightning jumps
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166050086490112
+    m_Localized: Distant discharge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166499803959296
+    m_Localized: Lightning dumps further
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166864481914880
+    m_Localized: Double strike
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166906689196032
+    m_Localized: Lightning might fork into two
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 2778970864991862821
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00906b30294f00000090eb824c6700000090eb697d6700000090eb869c67000000906b3cbb67000000902b39d56700000090eb17ff67000000906b006480000000902b63e68d000000906ba92b8700000090ab1e7e94000000906ba7949400000090ebfebd940000

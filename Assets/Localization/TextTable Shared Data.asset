@@ -1,0 +1,240 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: TextTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: TextTable
+  m_TableCollectionNameGuidString: afa9eeb93ed430148ad81b7b35a21d05
+  m_Entries:
+  - m_Id: 320862916608
+    m_Key: main_menu.play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 397497044992
+    m_Key: main_menu.quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2161445146624
+    m_Key: game.game_over
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2244882436096
+    m_Key: game.back_to_menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85053504458752
+    m_Key: upgrade.name.rapid_frost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85248938053632
+    m_Key: upgrade.description.rapid_frost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85499354779648
+    m_Key: upgrade.name.cold_mind
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85562097373184
+    m_Key: upgrade.description.cold_mind
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85695883087872
+    m_Key: upgrade.name.eternal_freeze
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85761070960640
+    m_Key: upgrade.description.eternal_freeze
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85947633602560
+    m_Key: upgrade.name.icicle_barrage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86130668834816
+    m_Key: upgrade.description.icicle_barrage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86336311365632
+    m_Key: upgrade.name.glacial_chill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86439734513664
+    m_Key: upgrade.description.glacial_chill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86657192398848
+    m_Key: upgrade.name.frigid_fate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86772061802496
+    m_Key: upgrade.description.frigid_fate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87038324609024
+    m_Key: upgrade.level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 113578311651328
+    m_Key: param.recovery_speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 113788345618432
+    m_Key: param.frequency
+    m_Metadata:
+      m_Items: []
+  - m_Id: 113921976143872
+    m_Key: param.min_duration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114053870227456
+    m_Key: param.max_duration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114165484851200
+    m_Key: param.amount
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114345315635200
+    m_Key: param.chance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 138687818731520
+    m_Key: upgrade.name.rapid_ignition
+    m_Metadata:
+      m_Items: []
+  - m_Id: 138775844589568
+    m_Key: upgrade.description.rapid_ignition
+    m_Metadata:
+      m_Items: []
+  - m_Id: 139994470256640
+    m_Key: upgrade.name.volcanic_eruption
+    m_Metadata:
+      m_Items: []
+  - m_Id: 140103559909376
+    m_Key: upgrade.description.volcanic_eruption
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141166992134144
+    m_Key: param.speedup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143489969655808
+    m_Key: upgrade.name.magma_cascade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143651790098432
+    m_Key: upgrade.description.magma_cascade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143894850015232
+    m_Key: upgrade.name.infernal_fissure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143967101095936
+    m_Key: upgrade.description.infernal_fissure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 147951517929472
+    m_Key: upgrade.name.phoenix_rebirth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148042471411712
+    m_Key: upgrade.description.phoenix_rebirth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148621595742208
+    m_Key: param.duration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 149685606780928
+    m_Key: upgrade.name.everlasting_inferno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 149757237104640
+    m_Key: upgrade.description.everlasting_inferno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 155641933697024
+    m_Key: upgrade.name.rapid_volt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 155702465892352
+    m_Key: upgrade.description.rapid_volt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156020645793792
+    m_Key: param.effectiveness
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156870969626624
+    m_Key: upgrade.name.rainbow_lightnings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156935939395584
+    m_Key: upgrade.description.rainbow_lightnings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 159330421411840
+    m_Key: upgrade.name.prolonged_surge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 159452865728512
+    m_Key: upgrade.description.prolonged_surge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 163269401350144
+    m_Key: param.min_amount
+    m_Metadata:
+      m_Items: []
+  - m_Id: 163366184914944
+    m_Key: param.max_amount
+    m_Metadata:
+      m_Items: []
+  - m_Id: 163543746580480
+    m_Key: param.distance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 165831038963712
+    m_Key: upgrade.name.arcing_fury
+    m_Metadata:
+      m_Items: []
+  - m_Id: 165892821061632
+    m_Key: upgrade.description.arcing_fury
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166050086490112
+    m_Key: upgrade.name.distant_discharge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166499803959296
+    m_Key: upgrade.description.distant_discharge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166864481914880
+    m_Key: upgrade.name.double_strike
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166906689196032
+    m_Key: upgrade.description.double_strike
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 2778970864991862808
+  references:
+    version: 2
+    RefIds:
+    - rid: 2778970864991862808
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1713009747648

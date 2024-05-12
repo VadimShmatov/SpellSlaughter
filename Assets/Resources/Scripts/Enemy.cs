@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
 
     private Animator animator;
     private Vector2 target = Vector2.zero;
-    private float speed = 0.8f;
+    private float speed = 0.6f;
     private float despawn_interval = 1.0f;
     private float shatter_animation_despawn_interval = 0.5f;
     private float shatter_icicle_interval = 0.15f;

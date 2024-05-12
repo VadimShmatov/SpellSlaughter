@@ -43,8 +43,8 @@ public class UpgradeManager : MonoBehaviour
 
     private Dictionary<string, Param> current_params_;
     private float current_xp_ = 0f;
-    private float xp_for_next_upgrade_ = 20f;
-    private float xp_increase_rate_ = 1.2f;
+    private float xp_for_next_upgrade_ = 100f;
+    private float xp_increase_rate_ = 1.1f;
     private float upgrade_state_ = 0f;
     private bool upgrade_ready_ = false;
     public static float slowdown = 0.001f;
@@ -72,6 +72,26 @@ public class UpgradeManager : MonoBehaviour
             {
                 obj.SetActive(false);
             }
+        }
+
+        int difficulty = PlayerPrefs.GetInt("difficulty", 0);
+        if (difficulty == 0)
+        {
+            UpdateParam("letter_generation_attempts", 15f);
+            UpdateParam("word_max_frequency", 5000f);
+            UpdateParam("letter_difficulty", 0.01f);
+        }
+        else if (difficulty == 1)
+        {
+            UpdateParam("letter_generation_attempts", 5f);
+            UpdateParam("word_max_frequency", 15000f);
+            UpdateParam("letter_difficulty", 0.1f);
+        }
+        else if (difficulty == 2)
+        {
+            UpdateParam("letter_generation_attempts", 3f);
+            UpdateParam("word_max_frequency", 50000f);
+            UpdateParam("letter_difficulty", 0.3f);
         }
     }
 
@@ -107,9 +127,8 @@ public class UpgradeManager : MonoBehaviour
         return result + remaining_xp / xp_for_next_upgrade;
     }
 
-    void GainXp(Enemy _)
+    private void UpdateButton()
     {
-        current_xp_ += 1f;
         float progress = CalculateProgress();
         upgrade_button_.transform.Find("UpgradeProgress").GetComponent<Image>().fillAmount = Mathf.Min(progress, 1f);
         if (progress >= 1f)
@@ -125,14 +144,28 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
+    void GainXp(Enemy _)
+    {
+        current_xp_ += 1f;
+        UpdateButton();
+    }
+
+    void GainXp(LetterHolder.Element _, float xp)
+    {
+        current_xp_ += 2f * xp;
+        UpdateButton();
+    }
+
     private void OnEnable()
     {
         Enemy.on_enemy_death += GainXp;
+        LetterHolder.on_spell_infusion += GainXp;
     }
 
     private void OnDisable()
     {
         Enemy.on_enemy_death -= GainXp;
+        LetterHolder.on_spell_infusion -= GainXp;
     }
 
     public void StartUpgrade()
@@ -160,6 +193,7 @@ public class UpgradeManager : MonoBehaviour
         }
         current_xp_ -= xp_for_next_upgrade_;
         xp_for_next_upgrade_ *= xp_increase_rate_;
+        UpdateButton();
     }
 
     private void Update()

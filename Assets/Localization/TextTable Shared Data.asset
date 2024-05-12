@@ -227,6 +227,42 @@ MonoBehaviour:
     m_Key: upgrade.description.double_strike
     m_Metadata:
       m_Items: []
+  - m_Id: 10318540115251200
+    m_Key: main_menu.options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327042435026944
+    m_Key: options.language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327105055985664
+    m_Key: options.difficulty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327173947428864
+    m_Key: options.easy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327225449287680
+    m_Key: options.medium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327278435930112
+    m_Key: options.hard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327326280355840
+    m_Key: options.back_to_menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10328585947287552
+    m_Key: options.eng
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10328625080143872
+    m_Key: options.rus
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -233,7 +233,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 166499803959296
-    m_Localized: Lightning dumps further
+    m_Localized: Lightning jumps further
     m_Metadata:
       m_Items: []
   - m_Id: 166864481914880
@@ -242,6 +242,42 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 166906689196032
     m_Localized: Lightning might fork into two
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10318540115251200
+    m_Localized: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327042435026944
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327105055985664
+    m_Localized: Difficulty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327173947428864
+    m_Localized: Easy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327225449287680
+    m_Localized: Medium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327278435930112
+    m_Localized: Hard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10327326280355840
+    m_Localized: Back to main menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10328585947287552
+    m_Localized: ENG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10328625080143872
+    m_Localized: RUS
     m_Metadata:
       m_Items: []
   references:

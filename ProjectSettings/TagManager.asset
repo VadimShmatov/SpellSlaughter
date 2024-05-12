@@ -48,3 +48,9 @@ TagManager:
   - name: Foreground
     uniqueID: 4070510551
     locked: 0
+  - name: Subletters
+    uniqueID: 353969787
+    locked: 0
+  - name: Letters
+    uniqueID: 3920496641
+    locked: 0

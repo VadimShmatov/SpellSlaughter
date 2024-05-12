@@ -42,14 +42,33 @@ public class SpellButton : MonoBehaviour
         }
     }
 
+    void AddBoost(LetterHolder.Element element, float amount)
+    {
+        if (LetterHolder.ToCardElement(element) == spell_element_)
+        {
+            boost += 3f * amount;
+        }
+        else
+        {
+            float rainbow_efficiency = UpgradeManager.Instance.GetParam("rainbow_recovery_rate").value / 100f;
+            bool lightning_buff = GameObject.Find("Circle").GetComponent<SpellCaster>().LightningBuffActive();
+            if (rainbow_efficiency > 0f && lightning_buff && spell_element_ != Element.Lightning)
+            {
+                boost += 3f * amount * rainbow_efficiency;
+            }
+        }
+    }
+
     private void OnEnable()
     {
         Card.on_card_disappearance += AddBoost;
+        LetterHolder.on_spell_infusion += AddBoost;
     }
 
     private void OnDisable()
     {
         Card.on_card_disappearance -= AddBoost;
+        LetterHolder.on_spell_infusion -= AddBoost;
     }
 
     void Update()

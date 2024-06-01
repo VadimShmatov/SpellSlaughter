@@ -43,7 +43,7 @@ public class UpgradeManager : MonoBehaviour
 
     private Dictionary<string, Param> current_params_;
     private float current_xp_ = 0f;
-    private float xp_for_next_upgrade_ = 100f;
+    private float xp_for_next_upgrade_ = 90f;
     private float xp_increase_rate_ = 1.1f;
     private float upgrade_state_ = 0f;
     private bool upgrade_ready_ = false;

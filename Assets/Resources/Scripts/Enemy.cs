@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Enemy;
 using static UnityEngine.GraphicsBuffer;
 
 public class Enemy : MonoBehaviour
@@ -25,6 +26,9 @@ public class Enemy : MonoBehaviour
 
     public delegate void OnEnemyDeath(Enemy enemy);
     public static OnEnemyDeath on_enemy_death;
+
+    public delegate void OnEnemyMovement(float distance);
+    public static OnEnemyMovement on_enemy_movement;
 
     public bool IsDead()
     {
@@ -108,6 +112,7 @@ public class Enemy : MonoBehaviour
         Vector2 position = transform.position;
         Vector2 velocity = (target - position).normalized * speed;
         transform.position = Vector2.MoveTowards(position, target, speed * Time.deltaTime);
+        on_enemy_movement?.Invoke(transform.position.magnitude);
         animator.SetFloat("velocityX", velocity.x);
         animator.SetFloat("velocityY", velocity.y);
     }

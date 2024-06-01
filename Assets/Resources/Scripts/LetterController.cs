@@ -40,6 +40,10 @@ public class LetterController : MonoBehaviour
         public void Load(BinaryReader stream, bool root = false)
         {
             nodes.Clear();
+            if (root)
+            {
+                letter_freq.Clear();
+            }
             value = word_count = 0;
 
             int count = stream.ReadInt32();
@@ -123,10 +127,11 @@ public class LetterController : MonoBehaviour
             return result;
         }
 
-        public bool RandomHint(Dictionary<char, int> letters, List<char> result)
+        public bool RandomHint(Dictionary<char, int> letters, List<char> result, out int freq)
         {
             if (value != 0)
             {
+                freq = value;
                 return true;
             }
 
@@ -144,12 +149,13 @@ public class LetterController : MonoBehaviour
                 }
                 var new_vetters = new Dictionary<char, int>(letters);
                 new_vetters[letter_array[order[i]]] -= 1;
-                if (nodes[letter_array[order[i]]].RandomHint(new_vetters, result))
+                if (nodes[letter_array[order[i]]].RandomHint(new_vetters, result, out freq))
                 {
                     result.Add(letter_array[order[i]]);
                     return true;
                 }
             }
+            freq = 0;
             return false;
         }
     };
@@ -261,7 +267,18 @@ public class LetterController : MonoBehaviour
             time_since_last_hint_ = 0;
             hint_interval_ += hint_interval_delta_;
             List<char> hint = new List<char>();
-            dawg.RandomHint(current_letters, hint);
+            int best_freq = 99999999;
+            for (int i = 0; i < 8; i++)
+            {
+                List<char> hint_candidate = new List<char>();
+                int new_freq;
+                dawg.RandomHint(current_letters, hint_candidate, out new_freq);
+                if (Mathf.Abs(hint_candidate.Count - 4.9f) < Mathf.Abs(hint.Count - 4.9f) || Mathf.Abs(hint_candidate.Count - 4.9f) == Mathf.Abs(hint.Count - 4.9f) && new_freq < best_freq)
+                {
+                    hint = hint_candidate;
+                    best_freq = new_freq;
+                }
+            }
             LetterHolder[] letter_holders = FindObjectsOfType(typeof(LetterHolder)) as LetterHolder[];
             LetterHolder prev = null;
             foreach (var target_letter in hint)
@@ -274,14 +291,12 @@ public class LetterController : MonoBehaviour
                     {
                         continue;
                     }
-                    if (prev != null)
-                    {
-                        letter_holder.Hint(prev);
-                    }
+                    letter_holder.Hint(prev);
                     prev = letter_holder;
                     break;
                 }
             }
+            prev.HintFirst();
         }
     }
 }

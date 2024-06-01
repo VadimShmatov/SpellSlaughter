@@ -22,6 +22,8 @@ public class SpellButton : MonoBehaviour
     private bool can_be_cast = false;
     private bool is_draining = false;
 
+    private float autocast_distance_ = -1f;
+
     public delegate void OnSpellActivation(string spell_name);
     public static OnSpellActivation on_spell_activation;
 
@@ -59,16 +61,26 @@ public class SpellButton : MonoBehaviour
         }
     }
 
+    void CheckAutocast(float distance)
+    {
+        if (distance < autocast_distance_)
+        {
+            Cast();
+        }
+    }
+
     private void OnEnable()
     {
         Card.on_card_disappearance += AddBoost;
         LetterHolder.on_spell_infusion += AddBoost;
+        Enemy.on_enemy_movement += CheckAutocast;
     }
 
     private void OnDisable()
     {
         Card.on_card_disappearance -= AddBoost;
         LetterHolder.on_spell_infusion -= AddBoost;
+        Enemy.on_enemy_movement -= CheckAutocast;
     }
 
     void Update()
@@ -127,6 +139,11 @@ public class SpellButton : MonoBehaviour
         {
             transform.Find("SpellIconActive").GetComponent<Image>().fillAmount = progress;
         }
+    }
+
+    public void SetAutocastDistance(float distance)
+    {
+        autocast_distance_ = distance;
     }
 
     public void Cast()

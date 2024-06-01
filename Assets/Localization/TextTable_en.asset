@@ -194,7 +194,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 156935939395584
-    m_Localized: During Lightning storm, lightning cards restore fire and cold spells
+    m_Localized: During Lightning storm, normal and lightning letters additionally
+      recharge fire and cold spells
     m_Metadata:
       m_Items: []
   - m_Id: 159330421411840
@@ -278,6 +279,46 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10328625080143872
     m_Localized: RUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17827167877173248
+    m_Localized: Only manual cast
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17827466775859200
+    m_Localized: Auto-cast on long distance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17827667783684096
+    m_Localized: Auto-cast on medium distance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17827920897347584
+    m_Localized: Auto-cast on short distance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17901718531182592
+    m_Localized: Fire infusion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17901790627074048
+    m_Localized: Increases chance to infuse a letter with fire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17901977265213440
+    m_Localized: Ice infusion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17902079375544320
+    m_Localized: Increases chance to infuse a letter with ice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17902179510358016
+    m_Localized: Lightning infusion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17902279787778048
+    m_Localized: Increases chance to infuse a letter with lightning
     m_Metadata:
       m_Items: []
   references:

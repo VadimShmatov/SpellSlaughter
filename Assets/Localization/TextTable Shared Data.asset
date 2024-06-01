@@ -263,6 +263,46 @@ MonoBehaviour:
     m_Key: options.rus
     m_Metadata:
       m_Items: []
+  - m_Id: 17827167877173248
+    m_Key: auto_cast.none
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17827466775859200
+    m_Key: auto_cast.far
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17827667783684096
+    m_Key: auto_cast.medium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17827920897347584
+    m_Key: auto_cast.near
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17901718531182592
+    m_Key: upgrade.name.fire_infusion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17901790627074048
+    m_Key: upgrade.description.fire_infusion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17901977265213440
+    m_Key: upgrade.name.ice_infusion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17902079375544320
+    m_Key: upgrade.description.ice_infusion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17902179510358016
+    m_Key: upgrade.name.lightning_infusion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17902279787778048
+    m_Key: upgrade.description.lightning_infusion
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

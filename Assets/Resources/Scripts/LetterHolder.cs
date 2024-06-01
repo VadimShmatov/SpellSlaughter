@@ -51,6 +51,7 @@ public class LetterHolder : MonoBehaviour
     float animation_time = 1f;
     float cooldown = 0f;
     float hint = 0f;
+    float first_letter_hint = 0f;
 
     bool is_infused = false;
     Element infusion_element = Element.Fire;
@@ -98,7 +99,8 @@ public class LetterHolder : MonoBehaviour
             Vector2 holder_position = last_letter_holder.transform.position;
             Vector2 cursor_position = letter_holder.transform.position;
             var distance = (cursor_position - holder_position).magnitude;
-            line.localScale = new Vector3(0.1f, distance, 1);
+            line.localScale = new Vector3(0.1f, 1f, 1);
+            line.GetComponent<SpriteRenderer>().size = new Vector2(1f, distance);
             line.position = (holder_position + cursor_position) / 2;
             float rotation = Vector2.SignedAngle(Vector2.right, cursor_position - holder_position);
             line.rotation = Quaternion.AngleAxis(90 + rotation, Vector3.forward);
@@ -109,14 +111,14 @@ public class LetterHolder : MonoBehaviour
 
     void WrongWordHandler()
     {
-        cooldown = animation_time;
+        //cooldown = animation_time;
     }
 
     void CorrectWordHandler()
     {
         hint = 0f;
         transform.Find("HintLine").gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
-        cooldown = animation_time;
+        //cooldown = animation_time;
     }
 
     public void SetActive(bool active)
@@ -135,7 +137,7 @@ public class LetterHolder : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (cooldown > 0f)
+        if (cooldown > 0f || Time.timeScale < 1f)
         {
             return;
         }
@@ -146,7 +148,7 @@ public class LetterHolder : MonoBehaviour
 
     public void OnMouseUp()
     {
-        if (cooldown > 0f)
+        if (cooldown > 0f || Time.timeScale < 1f)
         {
             return;
         }
@@ -232,7 +234,7 @@ public class LetterHolder : MonoBehaviour
 
     public void OnMouseDrag()
     {
-        if (cooldown > 0f)
+        if (cooldown > 0f || Time.timeScale < 1f)
         {
             return;
         }
@@ -243,7 +245,8 @@ public class LetterHolder : MonoBehaviour
             Vector2 holder_position = last_letter_holder.transform.position;
             Vector2 cursor_position = main_camera_.ScreenToWorldPoint(Input.mousePosition);
             var distance = (cursor_position - holder_position).magnitude;
-            line.localScale = new Vector3(0.1f, distance, 1);
+            line.localScale = new Vector3(0.1f, 1f, 1);
+            line.GetComponent<SpriteRenderer>().size = new Vector2(1f, distance);
             line.position = (holder_position + cursor_position) / 2;
             float rotation = Vector2.SignedAngle(Vector2.right, cursor_position - holder_position);
             line.rotation = Quaternion.AngleAxis(90 + rotation, Vector3.forward);
@@ -252,7 +255,7 @@ public class LetterHolder : MonoBehaviour
 
     public void OnMouseEnter()
     {
-        if (cooldown > 0f)
+        if (cooldown > 0f || Time.timeScale < 1f)
         {
             return;
         }
@@ -304,17 +307,32 @@ public class LetterHolder : MonoBehaviour
         red_flash = animation_time;
     }
 
+    public void HintFirst()
+    {
+        first_letter_hint = 3f;
+    }
+
     public void Hint(LetterHolder other)
     {
         hint = 3f;
-        var line = transform.Find("HintLine");
-        Vector2 holder_position = transform.position;
-        Vector2 cursor_position = other.transform.position;
-        var distance = (cursor_position - holder_position).magnitude;
-        line.localScale = new Vector3(0.1f, distance, 1);
-        line.position = (holder_position + cursor_position) / 2;
-        float rotation = Vector2.SignedAngle(Vector2.right, cursor_position - holder_position);
-        line.rotation = Quaternion.AngleAxis(90 + rotation, Vector3.forward);
+        if (other != null)
+        {
+            var line = transform.Find("HintLine");
+            Vector2 holder_position = transform.position;
+            Vector2 cursor_position = other.transform.position;
+            var distance = (cursor_position - holder_position).magnitude;
+            line.localScale = new Vector3(0.1f, 1f, 1);
+            line.GetComponent<SpriteRenderer>().size = new Vector2(1f, distance);
+            line.position = (holder_position + cursor_position) / 2;
+            float rotation = Vector2.SignedAngle(Vector2.right, cursor_position - holder_position);
+            line.rotation = Quaternion.AngleAxis(90 + rotation, Vector3.forward);
+        }
+        else
+        {
+            var line = transform.Find("HintLine");
+            line.position = Vector3.zero;
+            line.localScale = Vector3.zero;
+        }
     }
 
     public bool IsHinting()
@@ -324,6 +342,7 @@ public class LetterHolder : MonoBehaviour
 
     private IEnumerator ChangeLetter(char letter)
     {
+        cooldown = animation_time;
         yield return new WaitForSeconds(animation_time);
         var text = transform.Find("Letter").gameObject.GetComponent<TextMeshPro>();
         text.text = letter.ToString().ToUpper();
@@ -373,6 +392,20 @@ public class LetterHolder : MonoBehaviour
             else
             {
                 transform.Find("HintLine").gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.1f + 0.4f * Mathf.Abs(Mathf.Sin(2f * Mathf.PI * hint / (2f * animation_time))));
+            }
+        }
+        if (first_letter_hint > 0f)
+        {
+            first_letter_hint -= Time.deltaTime;
+            if (first_letter_hint < 0f)
+            {
+                transform.Find("Letter").gameObject.GetComponent<TextMeshPro>().color = new Color(1f, 1f, 1f, 1f);
+                first_letter_hint = 0f;
+            }
+            else
+            {
+                float delta = Mathf.Abs(Mathf.Sin(2f * Mathf.PI * hint / (2f * animation_time)));
+                transform.Find("Letter").gameObject.GetComponent<TextMeshPro>().color = new Color(1f - delta, 1f - delta, 1f - delta, 1f);
             }
         }
         if (is_infused && infusion < 1f)
